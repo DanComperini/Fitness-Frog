@@ -39,7 +39,6 @@
                         @Html.RadioButtonFor(m => m.Intensity,
                            Entry.IntensityLevel.Low) @Entry.IntensityLevel.Low
                     </label>
-
                     <label class="radio-inline">
                         @Html.RadioButtonFor(m => m.Intensity,
                         Entry.IntensityLevel.Medium) @Entry.IntensityLevel.Medium
@@ -54,8 +53,15 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(m => m.Exclude, new { @class = "control-label" })
-                @Html.TextBoxFor(m => m.Exclude, new { @class = "form-control" })
+                @*@Html.LabelFor(m => m.Exclude, new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.Exclude, new { @class = "form-control" })*@
+
+                <div class="checkbox">
+                    <label>
+                        @Html.CheckBoxFor(m => m.Exclude) @Html.DisplayNameFor(m => m.Exclude)
+                    </label>
+                </div>
+
             </div>
 
         </div>
